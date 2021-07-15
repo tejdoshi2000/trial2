@@ -8,7 +8,7 @@
 }/* Flipping cards */
 /* Additions */
 .services{
-    background-color: rgb(146, 176, 241);
+    background-color: rgb(165, 183, 223);
 }
 .flip-card {
     background-color: transparent;
@@ -29,7 +29,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
+    /* text-align: center; */
     transition: transform 0.6s;
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -46,24 +46,35 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
+  .flip-card-back h1{
+      text-align: center;
+      margin: 10px;
+  }
   
   .flip-card-front {
     background-color: #bbb;
     color: black;
   }
   .flip-card-front h1{
-      /* margin: 1rem; */
+      text-align: center;
+      color: black;
+      margin: 0.6rem;
   }
   
   .flip-card-back {
     background-color: #2980b9;
-    color: white;
+    /* color: white; */
     transform: rotateY(180deg);
+
+  }
+  .flip-card-back li{
+      color: white;
+      font-size: 1.3rem;
   }
   .flip-card-back ul li{
       padding: 0.2rem
   }
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap'); */
 
 * {
     margin: 0;
@@ -79,7 +90,7 @@ html{
 }
 
 li {
-    list-style: none;
+    /* list-style: none; */
 }
 
 a {
@@ -192,10 +203,16 @@ a {
         width: 35rem;
         height: 25rem;
         perspective: 1000px;
-        margin: 3% auto;
+        margin: 5% auto;
         
         
       }
+      
+  .flip-card-front h1{
+    text-align: center;
+    color: black;
+        
+}
     .nav-menu.active {
         left: 0;
     }
@@ -263,7 +280,7 @@ a {
 /* Intro */
 .intro{
     background-image: url("intro.jpg");
-    height: 60vh;
+    height: 75vh;
     margin-top: 0;
     background-position: center;
     background-size: cover;
@@ -288,8 +305,9 @@ a {
 .main1{
     text-align: center;
     font-size: 3rem;
-    color: gray;
+    color: black;
     padding: 2rem;
+    
 
 }
 .services
@@ -313,12 +331,12 @@ a {
     width: 100%;
     height: 100%;
     font-size: 1.5rem;
-    background-image: url("seperate.jpg");
+    background-image: url("bg111.jpg");
     background-color: darkgray;
     background-position:center;
     background-size: cover;
-    font-weight: bold;
-
+    font-weight: 400;
+    color: black;
     
 }
 
@@ -326,10 +344,11 @@ a {
     width: 100%;
     height: 100%;
     font-size: 1.5rem;
-    background-image: url("vision.jpg");
+    background-image: url("http://woodpeckerframes.com/wp-content/uploads/2018/06/contact_banner.jpg");
     background-position: center;
     background-size: cover;
-    font-weight: bold;
+    font-weight: 400;
+    color: white;
 
     
 }
