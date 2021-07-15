@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@100;400;500&display=swap');
+*{
+  margin:0;
+  padding:0;
+  font-family: 'Montserrat', sans-serif;
+  /* box-sizing: border-box; */
+  font-family: 'Poppins', sans-serif; 
+}/* Flipping cards */
+/* Additions */
+.services{
+    background-color: rgb(146, 176, 241);
+}
+.flip-card {
+    background-color: transparent;
+    width: 40rem;
+    height: 25rem;
+    perspective: 1000px;
+    margin: 3% auto;
+  }
+  .services{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 1.5rem;
+    
+}
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  .flip-card-front h1{
+      /* margin: 1rem; */
+  }
+  
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .flip-card-back ul li{
+      padding: 0.2rem
+  }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin-top: 0;
+    z-index: 0;
+}
+html{
+    font-size: 62.5%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+.header{
+
+    background-color: #4267b2;
+    height: 6rem ;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 1.5rem;
+    height: 4.5rem;
+    
+}
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+.nav-item {
+    margin-left: 5rem;
+    height: 100%;
+    
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: white;
+    padding: 1.9rem 1rem;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: white;
+    height: 100%;
+}
+.nav-logo:hover{
+    background-color: white;
+}
+.nav-item :hover{
+    background-color: white;
+
+}
+.nav-item:hover .nav-link{
+    color: #4267b2;
+}
+.heading{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: block;
+        margin: 0;
+        line-height: 1em;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        font-size: 8rem;
+        background: linear-gradient(to right, #1c87c9 50%, #8ebf42 20%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding: 0.5rem;
+        letter-spacing: 1px;
+}
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 4.9rem;
+        flex-direction: column;
+        background-color:#4267b2;
+        width: 100%;
+        /* border-radius: 10px; */
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+            margin-top: 0;
+            border-top: 2px solid white;
+    }
+    .flip-card {
+        background-color: transparent;
+        width: 35rem;
+        height: 25rem;
+        perspective: 1000px;
+        margin: 3% auto;
+        
+        
+      }
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+        /* margin-inline: 100px; */
+        /* width: 100%; */
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        margin-top: 0;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    /* Service cards */
+    .services{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    
+    /* Heading */
+    .heading{
+        font-size: 1rem;
+        display: block;
+            margin: 0;
+            line-height: 1em;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            font-size: 4rem;
+            background: linear-gradient(to right, #1c87c9 49%, #8ebf42 50%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1.5rem;
+    }
+    .main1{
+        text-align: center;
+        font-size: 2rem;
+    }
+        .nav-lin h1{
+        align-items: center;
+        justify-content: center;
+    }
+    /*  ABout US */
+    
+}
+/* Intro */
+.intro{
+    background-image: url("intro.jpg");
+    height: 60vh;
+    margin-top: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+}
+.intro main h1{
+    justify-content: center;
+    align-items: center;
+
+}
+/* Services */
+.strip{
+
+    height: 7rem;
+    background-color: rgb(241, 241, 237);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+.main1{
+    text-align: center;
+    font-size: 3rem;
+    color: gray;
+    padding: 2rem;
+
+}
+.services
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+/* ABOUT US SECTION */
+.whyus{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+
+.seperate{
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    background-image: url("seperate.jpg");
+    background-color: darkgray;
+    background-position:center;
+    background-size: cover;
+    font-weight: bold;
+
+    
+}
+
+.about{
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    background-image: url("vision.jpg");
+    background-position: center;
+    background-size: cover;
+    font-weight: bold;
+
+    
+}
+.seperate div{
+    padding: 1.5rem;
+}
+.seperate h1{
+    text-align: center;
+    text-decoration:underline;
+    padding-top: 1rem;
+}
+.about div{
+    padding: 2.1rem;
+}
+.about h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px){
+    .whyus{
+        flex-direction: column;
+    }
+    
+    .about{
+        width: 100%;
+        padding: 1rem 0;
+        
+    }
+    .seperate{
+        width: 100%;
+        padding: 1rem 0;
+        /* margin-top: 5rem; */
+    }
+    .seperate div{
+        padding: 1rem;
+    }
+    
+}
+@media only screen and (max-width: 520px){
+    .about{
+        height: 100%;
+    }
+    .seperate div{
+        /* padding: 2rem; */
+    }
+    .seperate{
+        /* padding: 1rem; */
+        height: 100%;
+        width: 100%;
+    }
+    
+      
+}
+@media only screen and (max-width:1326px) {
+    .seperate{
+        padding: 2.3rem;
+    }    
+}
+footer{
+    font-size: 1.5rem;
+}
